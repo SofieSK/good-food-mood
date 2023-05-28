@@ -51,9 +51,15 @@ nav li {
 
 /*main all pages*/
 
-main {
+body {
+    min-height: 100%;
     max-width: 100%;
-    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 .header-two {
@@ -80,20 +86,44 @@ footer {
 
 /* Home Page */
 
-.recent-posts {
+.welcome {
     display: grid;
-    grid-template-columns: 3;
+    grid-template-columns: repeat(3, auto);
     max-width: 100%;
-    margin-top: 50px;
+    margin-top: 0px;
     justify-content: center;
     text-align: center;
     padding: 50px;
     color: black;
 }
 
-.recent-posts div {
-    grid-template-columns: 1fr auto;
-    grid-column: -1/1;
+
+.title-one {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.image {
+    width: 300px;
+    height: 250px;
+}
+
+
+.welcome-text a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+@media screen and (min-width:600px) {
+    .welcome {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .welcome {}
+
 }
 
 .all-container {
@@ -113,7 +143,7 @@ footer {
     color: white;
 }
 
-.recent-posts h1,
+.welcome h1,
 .all-container h2 {
     font-size: 30px;
     text-transform: uppercase;
@@ -124,21 +154,35 @@ footer {
 
 /*all recipes*/
 
-.container,
-h1 {
+.container h1 {
     text-align: center;
     margin-top: 30px;
     font-size: 50px;
     text-transform: uppercase;
 }
 
-/* rest api*/
+.container p {
+    text-align: center;
+    margin-top: 0px;
+}
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     background: white;
+
 }
+
+.recipes li,
+.recipes a {
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+    text-align: center;
+    margin: 5px;
+}
+
+
 
 
 
@@ -147,5 +191,33 @@ h1 {
     padding: 1rem;
     background: white;
     font-size: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.recipes img {
+    width: 285px;
+    height: 260px;
+}
+
+
+.list a {
+    color: black;
+    text-decoration: none;
+    text-align: left center;
+}
+
+.recipes nav {
+    border: 2px solid;
+    margin-top: 10px;
+    width: 300px;
+    height: 350px;
     align-items: center;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.content {
+    font-size: 50px;
 }

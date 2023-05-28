@@ -19,10 +19,10 @@
     <header>
         <a href="index.html" class="logo">Good Food Mood</a>
         <nav class="header-one">
-            <li><a href="favourites.html" class="active">Your Favourites</a></li>
+            <li><a href="favourites.html">Your Favourites</a></li>
             <li><a href="all.html">All Recipes</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
 
 
         </nav>
@@ -39,15 +39,30 @@
             </ul>
         </nav>
     </section>
-    <main>
-        <div class="con">
-            <h1>Favourites</h1>
-            <div class="fav-con"></div>
-        </div>
+    <main class="contact-content">
+        <section class="content">
+            <h1>Send Me a Message</h1>
+            <form action="submit.php" method="post">
+                <div>
+                    <section class="form-wrapper">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="fullname">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject">
+                    </section>
+                    <section class="form-two">
+                        <label for="message" class="form-message">Message</label>
+                        <textarea type="text" id="message" name="message"></textarea>
+                    </section>
+                </div>
+                <input type="submit" value="Send Now" class="cta" />
+            </form>
+        </section>
 
     </main>
 
-    <script src="js/favourites.js"></script>
     <footer>Copyright &copy;</footer>
 </body>
 
